@@ -1,0 +1,73 @@
+<!--<html>
+<body>
+<desmond-player id="player"></desmond-player>
+<script src="desmond.min.js"></script>
+<script>
+window.onload = function(){
+document.getElementById("player").loadURL("../roms/New Super Mario Bros. (Europe) (En,Fr,De,Es,It).nds");
+}
+</script>
+</body>
+</html>
+
+-->
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Desmond</title>
+</head>
+
+<body style="background: black;">
+    <desmond-player></desmond-player>
+    <!--<input type="file" style="position: absolute; transform: translate(-50%, -50%); left: 50%; top: 95%; color: white;"></input>-->
+    <h1>AUGames NDS Player, sites.google.com/view/augames</h1>
+    <button onclick="loadRom(event)">Click to start game</button>
+    <script src="../dist/desmond.min.js"></script>
+    <script>            
+        function loadRom(event) {
+            event.target.parentNode.removeChild(event.target);
+            document.querySelector("desmond-player").loadURL("https://raw.githubusercontent.com/realtherealer/desmond/refs/heads/main/roms/Newer%20Super%20Mario%20Bros.%20DS.nds")
+            //OG Style
+            //document.querySelector("desmond-player").shadowRoot.querySelector("#top").style = "position: fixed;transform: translate(-50%, -50%);width: 30%;left: 50%;top: 30%;height: 40%;";
+            //document.querySelector("desmond-player").shadowRoot.querySelector("#bottom").style = "position: fixed;transform: translate(-50%, -50%);width: 30%;left: 50%;top: 70%;height: 40%;";
+            //New Style
+            document.querySelector("desmond-player").shadowRoot.querySelector("#top").style = "position: fixed; transform: translate(-75%, -35%); width: 50%; left: 50%; top: 30%; height: 70%;";
+            document.querySelector("desmond-player").shadowRoot.querySelector("#bottom").style = "position: fixed; transform: translate(40%, -40%); width: 33%; left: 50%; top: 70%; height: 48%;";
+        }
+    </script>
+    <script>
+        //document.querySelector("input").onchange = function() {
+        //    document.querySelector("desmond-player").loadURL(URL.createObjectURL(document.querySelector("input").files[0]))
+        //}
+      
+        window.onload = function() {
+            //confirm("CONTROL WARNING: You must press OK and then click the screen, otherwise controls will not work. You have 5 seconds after this messages disappears.");
+
+            function sleep(milliseconds) {
+              var start = new Date().getTime();
+              for (var i = 0; i < 1e7; i++) {
+                if ((new Date().getTime() - start) > milliseconds){
+                  break;
+                }
+              }
+            }
+
+            //sleep(5000);
+            
+            /*setTimeout(function() {
+                document.querySelector("desmond-player").loadURL("../roms/New Super Mario Bros. (Europe) (En,Fr,De,Es,It).nds")
+                //OG Style
+                //document.querySelector("desmond-player").shadowRoot.querySelector("#top").style = "position: fixed;transform: translate(-50%, -50%);width: 30%;left: 50%;top: 30%;height: 40%;";
+                //document.querySelector("desmond-player").shadowRoot.querySelector("#bottom").style = "position: fixed;transform: translate(-50%, -50%);width: 30%;left: 50%;top: 70%;height: 40%;";
+               //New Style
+                document.querySelector("desmond-player").shadowRoot.querySelector("#top").style = "position: fixed; transform: translate(-75%, -35%); width: 50%; left: 50%; top: 30%; height: 70%;";
+                document.querySelector("desmond-player").shadowRoot.querySelector("#bottom").style = "position: fixed; transform: translate(40%, -40%); width: 33%; left: 50%; top: 70%; height: 48%;";
+            }, 1000)*/
+        }
+    </script>
+</body>
+</html>
