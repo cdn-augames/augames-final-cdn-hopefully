@@ -240,13 +240,13 @@
         <h6 class="card-title mt-4">
             <a href="https://sites.google.com/view/mathshomeworkview" target="_blank" style="color: black;">
                 Visit AUGames
-                <img src="aug.png" style="height: 25px; padding-bottom: 5px; padding-left: 10px;">
+                <img src="https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/aug.png" style="height: 25px; padding-bottom: 5px; padding-left: 10px;">
             </a>
         </h6>
         <h6 class="card-title mt-4">
             <a href="https://github.com/nbarkhina/N64Wasm" target="_blank" style="color: black;">
                 View Original Source by nbarkhina. All credits go to their original owners.
-                <img src="github_logo.png" style="height: 25px; padding-bottom: 5px; padding-left: 10px;">
+                <img src="https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/github_logo.png" style="height: 25px; padding-bottom: 5px; padding-left: 10px;">
             </a>
         </h6>
         
@@ -1004,8 +1004,8 @@
         </div>
     </div>
 
-    <script src="settings.js"></script>
-    <script src="romlist.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/settings.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/romlist.js"></script>
     <script type="text/javascript">
         var rando = Math.floor(Math.random() * Math.floor(100000));
         var script = document.createElement('script');
