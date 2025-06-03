@@ -232,15 +232,20 @@ async LoadEmulator(byteArray){
             
             // Sanity check
             console.log('byteArray is Uint8Array:', byteArray instanceof Uint8Array);
-
-            FS.writeFile('/custom.v64', byteArray);
+            console.log('Type of byteArray:', typeof byteArray);
+            console.log('byteArray instanceof Uint8Array:', byteArray instanceof Uint8Array);
+            console.log('byteArray length:', byteArray?.length);
+            
+            console.log('Current FS mounts:', FS.mounts);
+            FS.writeFile('/working/custom.v64', byteArray);
             console.log('File written');
+            console.log('FS / listing:', FS.readdir('/'));
 
             this.beforeRun();
             this.WriteConfigFile();
             this.initAudio(); //need to initAudio before next call for iOS to work
             await this.LoadSram();
-            Module.callMain(['/custom.v64']);
+            Module.callMain(['/working/custom.v64']);
             this.findInDatabase();
             this.configureEmulator();
             $('#canvasDiv').show();
