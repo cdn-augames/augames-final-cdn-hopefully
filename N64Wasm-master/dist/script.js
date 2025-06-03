@@ -220,21 +220,27 @@ class MyClass {
         }
     }
 
-    async LoadEmulator(byteArray){
-        if (this.rom_name.toLocaleLowerCase().endsWith('.zip'))
-        {
+async LoadEmulator(byteArray){
+    try {
+        if (this.rom_name.toLocaleLowerCase().endsWith('.zip')) {
             this.rivetsData.lblError = 'Zip format not supported. Please uncompress first.'
             this.rivetsData.beforeEmulatorStarted = false;
-        }
-        else
-        {
+        } else {
+            console.log('Starting LoadEmulator');
             await this.writeAssets();
-            FS.writeFile('custom.v64',byteArray);
+            console.log('Assets written');
+            
+            // Sanity check
+            console.log('byteArray is Uint8Array:', byteArray instanceof Uint8Array);
+
+            FS.writeFile('/custom.v64', byteArray);
+            console.log('File written');
+
             this.beforeRun();
             this.WriteConfigFile();
             this.initAudio(); //need to initAudio before next call for iOS to work
             await this.LoadSram();
-            Module.callMain(['custom.v64']);
+            Module.callMain(['/custom.v64']);
             this.findInDatabase();
             this.configureEmulator();
             $('#canvasDiv').show();
@@ -245,8 +251,10 @@ class MyClass {
             this.setRemainingAudio = Module.cwrap('neil_set_buffer_remaining', null, ['number']);
             this.setDoubleSpeed = Module.cwrap('neil_set_double_speed', null, ['number']);
         }
-
+    } catch (err) {
+        console.error('LoadEmulator failed:', err);
     }
+}
 
     async writeAssets(){
 
