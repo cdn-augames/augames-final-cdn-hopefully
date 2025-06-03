@@ -237,7 +237,7 @@ async LoadEmulator(byteArray){
             console.log('byteArray length:', byteArray?.length);
             
             console.log('Current FS mounts:', FS.mounts);
-            FS.writeFile('/working/custom.v64', byteArray);
+            FS.writeFile('/custom.v64', byteArray);
             console.log('File written');
             console.log('FS / listing:', FS.readdir('/'));
 
@@ -245,7 +245,7 @@ async LoadEmulator(byteArray){
             this.WriteConfigFile();
             this.initAudio(); //need to initAudio before next call for iOS to work
             await this.LoadSram();
-            Module.callMain(['/working/custom.v64']);
+            Module.callMain(['/custom.v64']);
             this.findInDatabase();
             this.configureEmulator();
             $('#canvasDiv').show();
