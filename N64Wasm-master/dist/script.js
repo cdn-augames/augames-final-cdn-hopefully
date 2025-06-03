@@ -261,15 +261,13 @@ async LoadEmulator(byteArray){
     }
 }
 
-    async writeAssets(){
-
-        let file = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/assets.zip';
-        let responseText = await this.downloadFile(file);
-        console.log(file,responseText.length);
-        FS.writeFile(
-            file, // file name
-            responseText
-        );
+    async writeAssets() {
+        let fileURL = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/assets.zip';
+        let zipData = await this.downloadFile(fileURL); // should be Uint8Array or ArrayBuffer
+    
+        console.log('Downloaded zip data:', zipData.length);
+    
+        FS.writeFile('/assets.zip', zipData); // ✅ safe FS path
     }
 
     async downloadFile(url) {
