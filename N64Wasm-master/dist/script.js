@@ -250,7 +250,7 @@ class MyClass {
 
     async writeAssets(){
 
-        let file = 'assets.zip';
+        let file = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/assets.zip';
         let responseText = await this.downloadFile(file);
         console.log(file,responseText.length);
         FS.writeFile(
