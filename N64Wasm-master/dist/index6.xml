@@ -1009,7 +1009,7 @@
     <script type="text/javascript">
         var rando = Math.floor(Math.random() * Math.floor(100000));
         var script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/script.js?v=' + rando;
+        script.src = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/script.js';
         document.getElementsByTagName('head')[0].appendChild(script);
     </script>
 </body>
