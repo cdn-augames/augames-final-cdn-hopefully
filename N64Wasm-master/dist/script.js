@@ -1613,6 +1613,6 @@ window["Module"] = {
 
 var rando2 = Math.floor(Math.random() * 100000);
 var script2 = document.createElement('script');
-script2.src = 'input_controller.js?v=' + rando2;
+script2.src = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/input_controller.js?v=' + rando2;
 document.getElementsByTagName('head')[0].appendChild(script2);
 
