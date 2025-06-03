@@ -637,5 +637,5 @@ class InputController {
 window["myApp"].setupInputController();
 
 var script = document.createElement('script');
-script.src = 'n64wasm.js'
+script.src = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/n64wasm.js'
 document.getElementsByTagName('head')[0].appendChild(script);
