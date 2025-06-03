@@ -264,6 +264,7 @@ async LoadEmulator(byteArray){
     async writeAssets() {
         let fileURL = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/N64Wasm-master/dist/assets.zip';
         let zipData = await this.downloadFile(fileURL); // should be Uint8Array or ArrayBuffer
+        //test
     
         console.log('Downloaded zip data:', zipData.length);
     
