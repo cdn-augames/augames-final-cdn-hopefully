@@ -11,8 +11,8 @@ const defaultConfig = {
 };
 const defaultSWF = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/ruffle-swf-embed-main/ruffle-swf-embed-main/ruffle-testing/logo-anim.swf';
 const urlParams = new URLSearchParams(window.location.search);
-console.log(urlParams)
-const swfName = urlParams.get('swf') || defaultSWF;
+const hashParams = new URLSearchParams(window.location.hash.slice(1));
+const swfName = hashParams.get('swf') || defaultSWF;
 console.log(swfName)
 urlParams.delete('swf'); // Not part of Ruffle config object
 window.RufflePlayer = window.RufflePlayer || {};
