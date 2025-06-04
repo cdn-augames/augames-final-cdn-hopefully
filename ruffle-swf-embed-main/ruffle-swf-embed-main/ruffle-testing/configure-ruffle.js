@@ -9,7 +9,7 @@ const defaultConfig = {
 	"forceScale": true,
 	"forceAlign": true,
 };
-const defaultSWF = 'logo-anim.swf';
+const defaultSWF = 'https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/ruffle-swf-embed-main/ruffle-swf-embed-main/ruffle-testing/logo-anim.swf';
 const urlParams = new URLSearchParams(window.location.search);
 const swfName = urlParams.get('swf') || defaultSWF;
 urlParams.delete('swf'); // Not part of Ruffle config object
