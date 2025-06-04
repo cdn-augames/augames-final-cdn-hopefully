@@ -4,7 +4,7 @@ function fillGame() {
 	const container = document.getElementById('container');
 	container.appendChild(player);
 	player.load({
-		url: swfName,
+		url: "https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/ruffle-swf-embed-main/ruffle-swf-embed-main/ruffle-testing/"+swfName,
 		allowScriptAccess: true
 	}).then(() => {
 		console.info("Ruffle successfully loaded the file");
