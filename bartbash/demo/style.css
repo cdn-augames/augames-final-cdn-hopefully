@@ -1,0 +1,207 @@
+    body {
+      margin: 0;
+      background: #90c4e2 url(bg.gif) repeat-x;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 9pt;
+      line-height: 11pt;
+      color: #333333;
+      text-align: center;
+    }
+    
+    .main1 {
+      background-color: aliceblue;
+      width: 50%;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .bart-banner {
+      width: 100%;
+      max-width: 800px; 
+      height: auto;
+      display: block;
+      margin: 0 auto 20px auto;
+      border: 0px solid #ccc;
+      border-radius: 0px;
+    }
+
+    section, footer {
+      padding: 22px;
+      font-family: Helvetica, sans-serif;
+      font-size: 9pt;
+      line-height: 11pt;
+      color: #333333;
+    }
+
+    .title1 {
+      font-weight: bolder;
+      text-align: left;
+    }
+    h3, p {
+      font-size: medium;
+      padding-left: 5%;
+      text-align: left;
+      font-weight: lighter;
+    }
+    h2 {
+      text-align: left;
+      padding-left: 5%;
+      font-size: 11pt;
+      font-weight: bold;
+    }
+    .f, .logo {
+      font-size: medium;
+      font-weight: lighter;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 5%;
+      gap: 8px;
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 6px;
+      font-size: 9pt;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      font-size: 9pt;
+      cursor: pointer;
+    }
+    footer {
+      align-content: center;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    .faq-section {
+      background-color: #e6f3ff;
+      margin: 20px 22px;
+      padding: 20px;
+      border: 1px solid #b3d9ff;
+    }
+
+    .faq-title {
+      font-size: 11pt;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 15px;
+      color: #333333;
+      padding-left: 5%;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      font-size: 9pt;
+      color: #333333;
+      margin-bottom: 5px;
+      padding-left: 5%;
+      text-align: left;
+    }
+
+    .faq-answer {
+      font-size: 9pt;
+      color: #333333;
+      line-height: 11pt;
+      padding-left: 5%;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    h4 {
+      line-height: 50%;
+    }
+    .page-wrapper {
+        padding: 20px 10px;
+    }
+    
+    #game-container {
+        width: 1064px; 
+        height: 808px; 
+        padding: 20px; 
+        background-color: #000;
+        border: 4px solid #fff;
+        box-shadow: 0 0 15px 5px rgba(0,0,0,0.5);
+        margin: 20px auto; 
+    }
+
+    #game-frame {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border: none;
+    }
+    
+    .demo-release {
+        color: red;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background: #fff;
+        padding: 10px;
+        border: 2px solid red;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (max-width: 1100px) {
+        #game-container {
+            width: 95%;
+            height: auto;
+            padding: 10px;
+        }
+        #game-frame {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1024 / 768; 
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .main1 {
+        width: 95%;
+      }
+            
+      h3, p, h2 {
+        padding-left: 3%;
+      }
+      
+      form {
+        padding-left: 3%;
+      }
+      
+      input, textarea {
+        width: 94%;
+      }
+
+      .faq-section {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+
+      .faq-title, .faq-question, .faq-answer {
+        padding-left: 3%;
+      }
+    }
+    .donat {
+        color: rgb(248, 194, 58);
+        background-color: #000;
+        font-weight: bold;
+        padding: 5px;
+    }
