@@ -28,7 +28,7 @@
 	await new Promise(r => gapi.load("client", r));
 	await new Promise(r => gapi.client.load("youtube", "v3", r));
 	await gapi.client.init({
-		apiKey: "AIzaSyAfg_qq5MoQBEPCR2rQ-a0csm4sjY6p8BA",
+		apiKey: "AIzaSyBcfDdWhBx4vM-iDXlaIpD89GN-fEnS2Kk",
 		discoveryDocs: [
 			"https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"
 		]
