@@ -1,4 +1,4 @@
-@import url("https://raw.githubusercontent.com/cdn-augames/augames-final-cdn-hopefully/main/whitespiderFORK-Main/common.css");
+@import url("https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/whitespiderFORK-Main/common.css");
 
 #search-bar {
 	position: relative;
@@ -44,7 +44,7 @@
 	border: 1px solid #303030;
 	border-radius: 25px;
 	background-color: ##0f96f7;
-	background-image: url("https://raw.githubusercontent.com/cdn-augames/augames-final-cdn-hopefully/main/whitespiderFORK-Main/apps/ytunbl/search.svg");
+	background-image: url("https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/whitespiderFORK-Main/apps/ytunbl/search.svg");
 	background-size: 24px 24px;
 	background-repeat: no-repeat;
 	background-position: center;
