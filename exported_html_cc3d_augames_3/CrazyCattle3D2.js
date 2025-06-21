@@ -154,7 +154,7 @@ const Preloader = /** @constructor */ function () { // eslint-disable-line no-un
 	}
 
 	function loadFetch(file, tracker, fileSize, raw) {
-	    const baseUrl = "https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/exported_html_cc3d_augames_3/";
+	    const baseUrl = "https://raw.githubusercontent.com/cdn-augames/augames-final-cdn-hopefully/refs/heads/main/exported_html_cc3d_augames_3/";
 	    const fullUrl = baseUrl + file;
 	
 	    tracker[file] = {
