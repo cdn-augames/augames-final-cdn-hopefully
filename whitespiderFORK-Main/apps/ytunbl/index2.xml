@@ -11,8 +11,8 @@
 		<meta name="referrer" content="no-referrer" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<base href="." target="_blank" />
-		<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/cdn-augames/augames-final-cdn-hopefully/main/whitespiderFORK-Main/res/empty.ico" />
-		<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/cdn-augames/augames-final-cdn-hopefully/main/whitespiderFORK-Main/apps/ytunbl/index.css" />
+		<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/whitespiderFORK-Main/res/empty.ico" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/whitespiderFORK-Main/apps/ytunbl/index.css" />
 		<title>Youtube</title>
 	</head>
 	<body>
@@ -36,7 +36,7 @@
 		<div id="results"></div>
 		<div id="loadmore">Load More</div>
 		<script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
-		<script type="text/javascript" src="https://raw.githubusercontent.com/cdn-augames/augames-final-cdn-hopefully/main/whitespiderFORK-Main/apps/ytunbl/main.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/whitespiderFORK-Main/apps/ytunbl/main.js"></script>
 	</body>
 </html>
 
