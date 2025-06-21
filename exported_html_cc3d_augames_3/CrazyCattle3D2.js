@@ -154,21 +154,25 @@ const Preloader = /** @constructor */ function () { // eslint-disable-line no-un
 	}
 
 	function loadFetch(file, tracker, fileSize, raw) {
-		tracker[file] = {
-			total: fileSize || 0,
-			loaded: 0,
-			done: false,
-		};
-		return fetch(file).then(function (response) {
-			if (!response.ok) {
-				return Promise.reject(new Error(`Failed loading file '${file}'`));
-			}
-			const tr = getTrackedResponse(response, tracker[file]);
-			if (raw) {
-				return Promise.resolve(tr);
-			}
-			return tr.arrayBuffer();
-		});
+	    const baseUrl = "https://cdn.jsdelivr.net/gh/cdn-augames/augames-final-cdn-hopefully@main/exported_html_cc3d_augames_3/";
+	    const fullUrl = baseUrl + file;
+	
+	    tracker[file] = {
+	        total: fileSize || 0,
+	        loaded: 0,
+	        done: false,
+	    };
+	
+	    return fetch(fullUrl).then(function(response) {
+	        if (!response.ok) {
+	            return Promise.reject(new Error(`Failed loading file '${file}'`));
+	        }
+	        const tr = getTrackedResponse(response, tracker[file]);
+	        if (raw) {
+	            return Promise.resolve(tr);
+	        }
+	        return tr.arrayBuffer();
+	    });
 	}
 
 	function retry(func, attempts = 1) {
